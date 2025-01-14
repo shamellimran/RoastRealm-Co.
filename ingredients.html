@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredients - RoastRealm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('img/background.jpg'); /* Background image */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4a2c2a;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #4a2c2a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .ingredient-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .ingredient-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .ingredient-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #6f4e37;
+        }
+        h2{
+            color: #e1c59d;
+        }
+
+        .logo {
+            width: 100px; 
+            height: auto; 
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        main {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RoastRealm Co.</h1>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <p>Specialty Coffee for the Modern Hipster</p>
+    </header>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="index.html">Home</a>
+        <a href="organization.html">Organization</a>
+        <a href="ingredients.html">Ingredients</a>
+        <a href="menu.html">Menu</a>
+        <a href="products.html">Products</a>
+    </nav>
+    <main>
+        <h2>Our Quality Ingredients</h2>
+        <div class="ingredients-grid">
+            <!-- Ingredient 1 -->
+            <div class="ingredient-card">
+                <img src="img/beans.jpg" alt="Arabica Coffee Beans">
+                <h3><i class="fa-solid fa-mug-hot"></i> Arabica Coffee Beans</h3>
+            </div>
+            <!-- Ingredient 2 -->
+            <div class="ingredient-card">
+                <img src="img/milk.jpg" alt="Organic Milk">
+                <h3><i class="fa-solid fa-mug-hot"></i> Organic Milk</h3>
+            </div>
+            <!-- Ingredient 3 -->
+            <div class="ingredient-card">
+                <img src="img/syrup.jpg" alt="Vanilla Syrup">
+                <h3><i class="fa-solid fa-mug-hot"></i> Vanilla Syrup</h3>
+            </div>
+            <!-- Ingredient 4 -->
+            <div class="ingredient-card">
+                <img src="img/caramel.jpg" alt="Caramel Sauce">
+                <h3><i class="fa-solid fa-mug-hot"></i> Caramel Sauce</h3>
+            </div>
+            <!-- Ingredient 5 -->
+            <div class="ingredient-card">
+                <img src="img/cinnamon.jpg" alt="Cinnamon Powder">
+                <h3><i class="fa-solid fa-mug-hot"></i> Cinnamon Powder</h3>
+            </div>
+            <!-- Ingredient 6 -->
+            <div class="ingredient-card">
+                <img src="img/hazelnut.jpg" alt="Hazelnut Syrup">
+                <h3><i class="fa-solid fa-mug-hot"></i> Hazelnut Syrup</h3>
+            </div>
+            <!-- Ingredient 7 -->
+            <div class="ingredient-card">
+                <img src="img/almondmilk.jpg" alt="Almond Milk">
+                <h3><i class="fa-solid fa-mug-hot"></i> Almond Milk</h3>
+            </div>
+            <!-- Ingredient 8 -->
+            <div class="ingredient-card">
+                <img src="img/cocoa.jpg" alt="Cocoa Powder">
+                <h3><i class="fa-solid fa-mug-hot"></i> Cocoa Powder</h3>
+            </div>
+            <!-- Ingredient 9 -->
+            <div class="ingredient-card">
+                <img src="img/oatmilk.jpg" alt="Oat Milk">
+                <h3><i class="fa-solid fa-mug-hot"></i> Oat Milk</h3>
+            </div>
+            <!-- Ingredient 10 -->
+            <div class="ingredient-card">
+                <img src="img/espresso.jpg" alt="Espresso">
+                <h3><i class="fa-solid fa-mug-hot"></i> Espresso</h3>
+            </div>
+            <!-- Ingredient 11 -->
+            <div class="ingredient-card">
+                <img src="img/matcha.jpg" alt="Matcha Powder">
+                <h3><i class="fa-solid fa-mug-hot"></i> Matcha Powder</h3>
+            </div>
+            <!-- Ingredient 12 -->
+            <div class="ingredient-card">
+                <img src="img/chai.jpg" alt="Chai Spice">
+                <h3><i class="fa-solid fa-mug-hot"></i> Chai Spice</h3>
+            </div>
+            <!-- Ingredient 13 -->
+            <div class="ingredient-card">
+                <img src="img/coconut.jpg" alt="Coconut Milk">
+                <h3><i class="fa-solid fa-mug-hot"></i> Coconut Milk</h3>
+            </div>
+            <!-- Ingredient 14 -->
+            <div class="ingredient-card">
+                <img src="img/brownsugar.jpg" alt="Brown Sugar">
+                <h3><i class="fa-solid fa-mug-hot"></i> Brown Sugar</h3>
+            </div>
+            <!-- Ingredient 15 -->
+            <div class="ingredient-card">
+                <img src="img/nutmeg.jpg" alt="Nutmeg">
+                <h3><i class="fa-solid fa-mug-hot"></i> Nutmeg</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><marquee>2025 RoastRealm Co.</marquee></p>
+        <div id="clock">00:00:00</div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const time = now.toLocaleTimeString();
+                document.getElementById('clock').textContent = time;
+            }
+
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization - RoastRealm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('img/background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4a2c2a;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #d4a373;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .org-chart img {
+            width: 70%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .shop-address, .about, .social-media {
+            padding: 20px;
+            width: 70%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px auto;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4a2c2a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h2{
+            color: #e1c59d;
+        }
+
+        .logo {
+            width: 100px; 
+            height: auto; 
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+        }
+        .highlight {
+            color: #fff; /* White text color */
+            background-color: #4a2c2a; /* Brown background color */
+            padding: 2px 5px; /* Add some padding to make it look like a highlight */
+            border-radius: 5px; /* Add a slight curve to the corners */
+        }
+        /* Social Media Icons */
+        .social-media {
+            text-align: center;
+
+        }
+
+        .social-media a {
+            color: #4a2c2a;
+            text-decoration: none;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RoastRealm Co.</h1>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <p>Specialty Coffee for the Modern Hipster</p>
+    </header>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="index.html">Home</a>
+        <a href="organization.html">Organization</a>
+        <a href="ingredients.html">Ingredients</a>
+        <a href="menu.html">Menu</a>
+        <a href="products.html">Products</a>
+    </nav>
+    <main>
+        <h2>Our Organizational Structure</h2>
+        <div class="org-chart">
+            <img src="img/orgchart.png" alt="Organizational Structure">
+        </div>
+        <h2>Our Shop Address</h2>
+        <div class="shop-address">
+            <p>23, Jalan Sutera Utama 5, Taman Sutera Utama, 81300 Skudai, Johor, Malaysia.</p>
+        </div>
+        <h2>About Us</h2>
+        <div class="about">
+            <p>Welcome to <span class="highlight">RoastRealm Co.</span>, your premier destination for specialty coffee. Our mission is to provide the highest quality coffee beans, expertly roasted to bring out the unique flavors and aromas of each blend. We're passionate about coffee and dedicated to serving our customers with exceptional service and a warm smile.</p>
+        </div>
+        <h2>Follow Us!</h2>
+            <div class="social-media">
+                    <a href="https://www.tiktok.com/@melzinanotherverse?_t=8s31yXZ1b7v&_r=1">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </span>
+                    </a>
+                    <a href="https://www.instagram.com/roastrealm.co?igsh=MXhzNWd1ODQyN2ptcw%3D%3D&utm_source=qr">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </a>
+                    <a href="https://web.facebook.com/RoastRealm.co/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa-brands fa-facebook"></i>
+                        </span>
+                    </a>
+                    <a href="https://wa.me/0197046059">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                    </a>
+            </div>
+    </main>
+    <footer>
+        <p><marquee>2025 RoastRealm Co.</marquee></p>
+        <div id="clock">00:00:00</div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const time = now.toLocaleTimeString();
+                document.getElementById('clock').textContent = time;
+            }
+
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
+    </footer>
+</body>
+</html>

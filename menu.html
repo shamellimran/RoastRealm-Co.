@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu Table - RoastRealm</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        table {
+            width: 48%; /* Adjust width for side-by-side layout */
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        td {
+            color: #555;
+        }
+        /* Bakery Table Styling */
+        .bakery th {
+            background-color: #77411b; /* Coral color for Bakery header */
+        }
+        .bakery tr:nth-child(even) {
+            background-color: #fff3f2; /* Light coral for even rows */
+        }
+        .bakery tr:hover {
+            background-color: #ffe5e3; /* Lighter coral for hover */
+        }
+        /* Coffee Table Styling */
+        .coffee th {
+            background-color: #77411b /* Purple color for Coffee header */
+        }
+        .coffee tr:nth-child(even) {
+            background-color: #f0e8ff; /* Light purple for even rows */
+        }
+        .coffee tr:hover {
+            background-color: #e0d6ff; /* Lighter purple for hover */
+        }
+        @media (max-width: 768px) {
+            table {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ddd;
+                margin-bottom: 10px;
+                border-radius: 5px;
+            }
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                content: attr(data-label);
+                font-weight: bold;
+                color: #333;
+            }
+        }
+        footer {
+            background-color: #4a2c2a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+        .logo {
+            width: 100px; 
+            height: auto; 
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+        }
+        .menu-title {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .menu-title h2 {
+            margin: 0 auto;
+            display: inline-block;
+            color: #e1c59d;
+        }
+        @keyframes slideFromBottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .menu-container table {
+            animation: slideFromBottom 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RoastRealm Co.</h1>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <p>Specialty Coffee for the Modern Hipster</p>
+    </header>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="index.html">Home</a>
+        <a href="organization.html">Organization</a>
+        <a href="ingredients.html">Ingredients</a>
+        <a href="menu.html">Menu</a>
+        <a href="products.html">Products</a>
+    </nav>
+    <div class="menu-title">
+        <h2>Menu Title</h2>
+    </div>
+    <div class="menu-container">
+        <!-- Bakery Table -->
+        <table class="bakery">
+            <thead>
+                <tr>
+                    <th colspan="3">Bakery </th>
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Item">Croissant</td>
+                    <td data-label="Description">Buttery, flaky, and delicious.</td>
+                    <td data-label="Price">RM6.99</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Blueberry Muffin</td>
+                    <td data-label="Description">Freshly baked with juicy blueberries.</td>
+                    <td data-label="Price">RM5.49</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Chocolate Chip Cookie</td>
+                    <td data-label="Description">Soft and chewy with rich chocolate chips.</td>
+                    <td data-label="Price">RM6.49</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Banana Bread</td>
+                    <td data-label="Description">Moist and flavorful with a hint of cinnamon.</td>
+                    <td data-label="Price">RM4.99</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Almond Croissant</td>
+                    <td data-label="Description">Filled with almond cream and topped with sliced almonds.</td>
+                    <td data-label="Price">RM6.99</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Coffee Table -->
+        <table class="coffee">
+            <thead>
+                <tr>
+                    <th colspan="3">Coffee</th>
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Item">Espresso</td>
+                    <td data-label="Description">Rich and bold coffee shot.</td>
+                    <td data-label="Price">RM7.99</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Latte</td>
+                    <td data-label="Description">Smooth espresso with steamed milk.</td>
+                    <td data-label="Price">RM7.99</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Cappuccino</td>
+                    <td data-label="Description">Espresso topped with frothy milk.</td>
+                    <td data-label="Price">RM7.99</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Mocha</td>
+                    <td data-label="Description">Chocolatey espresso drink.</td>
+                    <td data-label="Price">RM7.99</td>
+                </tr>
+                <tr>
+                    <td data-label="Item">Cold Brew</td>
+                    <td data-label="Description">Smooth and refreshing cold coffee.</td>
+                    <td data-label="Price">RM7.49</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <p><marquee>2025 RoastRealm Co.</marquee></p>
+        <div id="clock">00:00:00</div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const time = now.toLocaleTimeString();
+                document.getElementById('clock').textContent = time;
+            }
+
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
+    </footer>
+</body>
+</html>

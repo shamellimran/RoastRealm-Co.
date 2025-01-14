@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoastRealm Co.</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        .logo {
+            width: 100px; 
+            height: auto; 
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+        }
+        @keyframes slideFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        main {
+            animation: slideFromTop 2s ease-in-out;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            alert("Welcome to RoastRealm Co.!");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>RoastRealm Co.</h1>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <p>Specialty Coffee for the Modern Hipster</p>
+    </header>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="index.html">Home</a>
+        <a href="organization.html">Organization</a>
+        <a href="ingredients.html">Ingredients</a>
+        <a href="menu.html">Menu</a>
+        <a href="products.html">Products</a>
+    </nav>
+    <main>
+        <section id="hero">
+            <video autoplay loop muted class="video">
+                <source src="media/video.mp4" type="video/mp4">
+            </video>
+            <h2>Welcome to Our Coffee Shop</h2>
+            <p>Discover the finest coffee blends, handcrafted with love and care.</p>
+            <button onclick="location.href='organization.html'">Learn More</button>
+            <br>
+            <br>
+            <audio align="center" controls autoplay loop>
+                <source src="media/music.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+    </main>
+    
+    <footer>
+        <p><marquee>2025 RoastRealm Co.</marquee></p>
+        <div id="clock">00:00:00</div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const time = now.toLocaleTimeString();
+                document.getElementById('clock').textContent = time;
+            }
+
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
+    </footer>
+</body>
+</html>
